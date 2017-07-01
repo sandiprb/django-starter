@@ -1,0 +1,7 @@
+@import "_config.css";
+
+body {
+	font-family: $baseFont;
+	color: $base;
+	font-size: 14px;
+}

@@ -1,0 +1,11 @@
+*.pyc
+node_modules/
+base/local_settings.py
+
+*.log
+*.DS_Store
+static/admin
+env/
+assets/
+static/css/
+static/CACHE/

@@ -1,0 +1,16 @@
+$base: #333;
+$static: /assets/img;
+$baseFont:  'Lato', 'Helvetica Neue', Tahoma, Arial, sans-serif;
+
+
+/*Breakpoints variables (media queries)*/
+$screen-width-md:1199px;
+$screen-width-sm:991px;
+$screen-width-xs:767px;
+$screen-width-xxs:499px;
+
+
+/* MIXINS */
+@define-mixin transition $range: all, $time: 0.4s, $ease: cubic-bezier(0.25, 0.8, 0.25, 1) {
+  transition: $range $time $ease;
+}

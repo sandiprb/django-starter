@@ -1,0 +1,42 @@
+{% load static compress %}
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+	<meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"/>
+	
+	{% compress css %}
+		{% block css %}
+			<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/base.css">
+		{% endblock css %}
+	{% endcompress css %}
+
+	<script type="text/javascript">
+		var CSRF_TOKEN = '{{ csrf_token }}';
+	</script>
+
+</head>
+<body>
+
+	{% block header %}
+	{% include "components/header.html" %}
+	{% endblock header %}
+
+
+	{% block body %}
+		<h2>HELLO DJANGO!</h2>
+	{% endblock body %}
+
+
+	{% block footer %}
+	{% include "components/footer.html" %}
+	{% endblock footer %}
+
+	{% compress js %}
+	{% block js %}{% endblock js %}
+	{% endcompress js %}
+
+</body>
+</html>
