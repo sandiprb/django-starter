@@ -35,7 +35,9 @@
 	{% endblock footer %}
 
 	{% compress js %}
-	{% block js %}{% endblock js %}
+		{% block js %}
+			<script type="text/javascript" src="{{ STATIC_URL }}js/index.js"></script>
+		{% endblock js %}
 	{% endcompress js %}
 
 </body>

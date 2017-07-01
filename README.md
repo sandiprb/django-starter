@@ -21,6 +21,10 @@ build_css.sh         # Post-CSS complie script
 Makefile             # Stuff
 ```
 
+## Plugins Added
+[Django Compressor](https://django-compressor.readthedocs.io/en/latest/)
+[django-hmin](https://pypi.python.org/pypi/django-hmin/0.3.2) (HTML Minifier)
+
 
 ## Getting Started
 
