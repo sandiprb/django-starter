@@ -22,7 +22,7 @@ ALLOWED_HOSTS = ['*']
 HTML_MINIFY = False
 COMPRESS_ENABLED = True
 COMPRESS_OFFLINE = False
-COMPRESS_CSS_FILTERS = ['compressor.filters.css_default.CssAbsoluteFilter',  'compressor.filters.cssmin.CSSMinFilter']
+COMPRESS_CSS_FILTERS = ['compressor.filters.css_default.CssAbsoluteFilter', 'compressor.filters.cssmin.CSSMinFilter']
 
 AUTH_USER_MODEL = 'core.User'
 LOGIN_REDIRECT_URL = 'index'

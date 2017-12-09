@@ -17,7 +17,7 @@ pcss/               # Post-CSS files with config.js file included
 static/             # all other static files goes here
 requirements.txt
 package.json
-build_css.sh         # Post-CSS complie script 
+build_css.sh         # Post-CSS complie script
 Makefile             # Stuff
 ```
 
