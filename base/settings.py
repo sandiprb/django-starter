@@ -24,6 +24,11 @@ COMPRESS_ENABLED = True
 COMPRESS_OFFLINE = False
 COMPRESS_CSS_FILTERS = ['compressor.filters.css_default.CssAbsoluteFilter',  'compressor.filters.cssmin.CSSMinFilter']
 
+AUTH_USER_MODEL = 'core.User'
+LOGIN_REDIRECT_URL = 'index'
+LOGIN_URL = '/login/'
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -34,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'compressor',
+    'core',
 ]
 
 MIDDLEWARE = [
@@ -80,13 +86,13 @@ DATABASES = {
         # 'oracle'.
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         # Or path to database file if using sqlite3.
-        'NAME': 'starter_temp',
-        'USER': 'postgres',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        # Set to empty string for localhost. Not used with sqlite3.
-        'HOST': 'localhost',
-        # Set to empty string for default. Not used with sqlite3.
-        'PORT': '5433'
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        # Set to empty string for localhost.
+        'HOST': '',
+        # Set to empty string for default.
+        'PORT': ''
     }
 }
 
@@ -140,3 +146,9 @@ STATICFILES_FINDERS = (
     # other finders..
     'compressor.finders.CompressorFinder',
 )
+
+# NOTE: This must be last few lines of this file.
+try:
+    from local_settings import *  # noqa
+except ImportError:
+    pass
